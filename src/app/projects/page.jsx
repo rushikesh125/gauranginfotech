@@ -2,8 +2,9 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Server, Cloud, Shield, Pickaxe, MapPin, Database, ArrowRight } from "lucide-react";
+import { Server, Cloud, Shield, Pickaxe, MapPin, Database, ArrowRight, Settings, HardDrive } from "lucide-react";
 
+// --- Project Data ---
 // --- Project Data ---
 const projects = [
   {
@@ -35,22 +36,22 @@ const projects = [
     shadow: "shadow-emerald-500/20",
   },
   {
-    title: "Smart Mining Dashboard",
-    location: "Industrial Automation",
-    desc: "Custom software dashboard for monitoring trucks, fuel, and productivity across multiple sites.",
-    tags: ["IoT", "React", "Dashboard"],
-    icon: Pickaxe,
-    color: "bg-orange-600",
-    shadow: "shadow-orange-500/20",
+    title: "IT Infrastructure Upgrade",
+    location: "Manufacturing Unit, Pune",
+    desc: "Complete hardware refresh including servers, storage systems, and networking equipment for a medium-scale manufacturing unit.",
+    tags: ["Hardware", "Storage", "Networking"],
+    icon: HardDrive,
+    color: "bg-slate-600",
+    shadow: "shadow-slate-500/20",
   },
   {
-    title: "Fuel & Fleet Tracking System",
-    location: "Transport Company",
-    desc: "Integrated GPS and fuel-level sensors into 70+ vehicle fleet for real-time tracking and route optimization.",
-    tags: ["GPS", "IoT", "Fleet Management"],
-    icon: MapPin,
-    color: "bg-rose-600",
-    shadow: "shadow-rose-500/20",
+    title: "Managed IT Services",
+    location: "Healthcare Provider",
+    desc: "24/7 monitoring and proactive maintenance for critical IT infrastructure, reducing downtime by 60% and improving response times.",
+    tags: ["Managed Services", "Monitoring", "Support"],
+    icon: Settings,
+    color: "bg-green-600",
+    shadow: "shadow-green-500/20",
   },
   {
     title: "Custom ERP Software",
@@ -62,6 +63,7 @@ const projects = [
     shadow: "shadow-cyan-500/20",
   },
 ];
+
 
 // Animation variants for staggered entrance
 const containerVariants = {

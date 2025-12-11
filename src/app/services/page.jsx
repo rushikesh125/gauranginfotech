@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Cloud, Server, ShieldCheck, Pickaxe, Code2, Truck, ArrowRight, Zap } from "lucide-react";
+import { Cloud, Server, ShieldCheck, HardDrive, Code2, Network, Settings, FileCheck, ArrowRight, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 // --- Data ---
@@ -32,11 +32,11 @@ const services = [
     delay: 0.2
   },
   {
-    title: "Mining IT Solutions",
-    desc: "Tech-enabled platforms for automation, monitoring, and safety in mining operations.",
-    icon: Pickaxe,
-    color: "bg-orange-50 text-orange-600",
-    gradient: "from-orange-500/20 to-amber-500/20",
+    title: "IT Hardware Supply",
+    desc: "Premium hardware, storage devices, and networking equipment from trusted global brands.",
+    icon: HardDrive,
+    color: "bg-slate-50 text-slate-600",
+    gradient: "from-slate-500/20 to-gray-500/20",
     delay: 0.25
   },
   {
@@ -48,50 +48,61 @@ const services = [
     delay: 0.3
   },
   {
-    title: "Fuel & Vehicle Tracking",
-    desc: "Real-time GPS tracking to reduce costs, monitor behavior, and improve delivery efficiency.",
-    icon: Truck,
-    color: "bg-rose-50 text-rose-600",
-    gradient: "from-rose-500/20 to-pink-500/20",
+    title: "Storage & Networking",
+    desc: "Robust networking infrastructure and enterprise-grade storage solutions for seamless operations.",
+    icon: Network,
+    color: "bg-cyan-50 text-cyan-600",
+    gradient: "from-cyan-500/20 to-blue-500/20",
     delay: 0.35
+  },
+  {
+    title: "Managed Services",
+    desc: "24/7 monitoring, proactive maintenance, and complete IT management for your business.",
+    icon: Settings,
+    color: "bg-green-50 text-green-600",
+    gradient: "from-green-500/20 to-emerald-500/20",
+    delay: 0.4
+  },
+  {
+    title: "IT Auditing Services",
+    desc: "Comprehensive audits to assess security posture, compliance, and operational efficiency.",
+    icon: FileCheck,
+    color: "bg-orange-50 text-orange-600",
+    gradient: "from-orange-500/20 to-amber-500/20",
+    delay: 0.45
   },
 ];
 
-// --- Components ---
-
 const ServiceCard = ({ title, desc, icon: Icon, color, gradient, delay }) => (
   <motion.div
-    initial={{ opacity: 0, y: 24 }}
+    initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true, margin: "-80px" }}
-    whileHover={{ y: -6, scale: 1.01 }}
-    transition={{ delay, type: "spring", stiffness: 260, damping: 22 }}
-    className="group relative h-full rounded-[2rem] bg-white/80 backdrop-blur-xl border border-white/70 shadow-[0_18px_45px_rgba(15,23,42,0.08)] hover:shadow-[0_22px_60px_rgba(79,70,229,0.18)] overflow-hidden transition-shadow duration-500"
+    viewport={{ once: true }}
+    transition={{ delay, duration: 0.5 }}
+    className="group relative h-full bg-white rounded-[2rem] border border-slate-100 shadow-xl shadow-slate-200/50 p-8 overflow-hidden hover:-translate-y-2 transition-transform duration-300"
   >
     {/* Hover Gradient Background */}
-    <div className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-      <div className={`absolute -top-24 -right-24 h-72 w-72 bg-gradient-to-br ${gradient} blur-3xl`} />
-    </div>
+    <div className={`absolute top-0 right-0 w-[300px] h-[300px] bg-gradient-to-br ${gradient} blur-[80px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none translate-x-1/2 -translate-y-1/2`} />
 
-    <div className="relative z-10 flex flex-col h-full p-8">
+    <div className="relative z-10 flex flex-col h-full">
       {/* Icon Container */}
-      <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 shadow-[0_0_0_1px_rgba(148,163,184,0.35)] ring-1 ring-white/80 group-hover:scale-110 transition-transform duration-300 ${color}`}>
-        <Icon className="w-7 h-7" strokeWidth={1.6} />
+      <div className={`w-16 h-16 rounded-2xl ${color} flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform duration-300`}>
+        <Icon className="w-8 h-8" strokeWidth={1.5} />
       </div>
 
-      <h3 className="text-xl font-semibold text-slate-900 tracking-tight mb-2 group-hover:text-indigo-600 transition-colors">
+      <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-indigo-600 transition-colors">
         {title}
       </h3>
       
-      <p className="text-sm text-slate-600 leading-relaxed mb-6 flex-grow">
+      <p className="text-slate-600 leading-relaxed mb-8 flex-grow">
         {desc}
       </p>
 
-      {/* "Explore Solution" Link */}
-      <button className="inline-flex items-center text-xs font-semibold text-slate-500 group-hover:text-indigo-600 tracking-[0.18em] uppercase transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2">
-        Explore solution
-        <ArrowRight className="w-3.5 h-3.5 ml-2 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
-      </button>
+      {/* "Learn More" Link */}
+      <div className="flex items-center text-sm font-semibold text-slate-400 group-hover:text-indigo-600 transition-colors">
+        <span>Explore Solution</span>
+        <ArrowRight className="w-4 h-4 ml-2 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+      </div>
     </div>
   </motion.div>
 );
@@ -101,111 +112,73 @@ export default function ServicesPage() {
     <div className="bg-slate-50 min-h-screen overflow-x-hidden pb-20">
       
       {/* 1. HERO SECTION */}
-      <section className="relative pt-28 pb-24 px-6">
-        {/* Layered Background Blobs */}
-        <div className="pointer-events-none absolute -top-40 -left-32 h-80 w-80 rounded-full bg-gradient-to-br from-indigo-400/25 via-sky-300/20 to-transparent blur-3xl" />
-        <div className="pointer-events-none absolute -bottom-40 -right-32 h-96 w-96 rounded-full bg-gradient-to-tr from-violet-400/20 via-fuchsia-300/10 to-transparent blur-3xl" />
-        <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[600px] w-[600px] rounded-full bg-gradient-to-br from-cyan-300/15 to-transparent blur-3xl" />
+      <section className="relative pt-32 pb-24 px-6">
+        {/* Background Blobs */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-indigo-200/20 blur-[120px] rounded-full pointer-events-none" />
         
-        <div className="relative max-w-5xl mx-auto">
-          <div className="rounded-[2.5rem] bg-white/80 backdrop-blur-2xl border border-white/70 shadow-[0_18px_60px_rgba(15,23,42,0.12)] px-6 py-12 sm:px-10 sm:py-16 text-center">
-            
-            {/* Badge */}
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ type: "spring", stiffness: 260, damping: 24 }}
-              className="inline-flex items-center gap-2 rounded-full bg-slate-50 border border-slate-200 px-4 py-1.5 mb-8 shadow-sm"
-            >
-              <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-indigo-500/10 text-indigo-500">
-                <Zap className="w-3.5 h-3.5" />
-              </span>
-              <span className="text-[11px] font-semibold tracking-[0.22em] text-slate-600 uppercase">
-                Our Expertise
-              </span>
-            </motion.div>
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-indigo-100 shadow-sm mb-8"
+          >
+            <Zap className="w-4 h-4 text-indigo-500 fill-indigo-500" />
+            <span className="text-sm font-bold text-indigo-900 tracking-wide uppercase">
+              Our Expertise
+            </span>
+          </motion.div>
 
-            {/* Title */}
-            <motion.h1 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1, type: "spring", stiffness: 240, damping: 26 }}
-              className="text-5xl md:text-6xl font-semibold text-slate-900 tracking-tight mb-6"
-            >
-              Future-Ready <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-600">
-                IT Solutions.
-              </span>
-            </motion.h1>
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-5xl md:text-7xl font-bold text-slate-900 tracking-tight mb-8"
+          >
+            Tailored for <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-600">
+              SMBs & Enterprises
+            </span>
+          </motion.h1>
 
-            {/* Body */}
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, type: "spring", stiffness: 240, damping: 26 }}
-              className="text-base md:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto"
-            >
-              We empower businesses with innovation, security, and performance to deliver real business outcomes.
-            </motion.p>
-          </div>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed"
+          >
+            We empower Small and Medium Businesses with scalable IT solutions—from hardware supply to managed services and everything in between.
+          </motion.p>
         </div>
       </section>
 
-      {/* 2. SERVICES GRID (Bento Style) */}
-      <section className="px-6 pb-24 scroll-mt-24">
+      {/* 2. SERVICES GRID */}
+      <section className="px-6 pb-24">
         <div className="max-w-7xl mx-auto">
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 auto-rows-fr">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, idx) => (
-              <div
-                key={service.title}
-                className={
-                  idx === 0
-                    ? "lg:col-span-2"
-                    : idx === 4
-                    ? "lg:row-span-2"
-                    : ""
-                }
-              >
-                <ServiceCard {...service} />
-              </div>
+              <ServiceCard key={idx} {...service} />
             ))}
           </div>
         </div>
       </section>
 
-      {/* 3. CTA SECTION (Cinematic & Layered) */}
-      <section className="px-6 scroll-mt-24">
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ type: "spring", stiffness: 230, damping: 25 }}
-          className="max-w-7xl mx-auto relative rounded-[3rem] overflow-hidden bg-gradient-to-r from-indigo-600 to-violet-700 shadow-[0_30px_80px_rgba(15,23,42,0.45)] shadow-indigo-500/30"
-        >
-          {/* Decorative Grid Pattern */}
+      {/* 3. CTA SECTION */}
+      <section className="px-6">
+        <div className="max-w-7xl mx-auto relative rounded-[3rem] overflow-hidden bg-gradient-to-r from-indigo-600 to-violet-700 shadow-2xl shadow-indigo-500/30">
+          {/* Decorative Pattern */}
           <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:20px_20px]" />
           
-          {/* Glass Layer */}
-          <div className="absolute inset-0 bg-white/5 backdrop-blur-xl border border-white/20" />
-          
           <div className="relative z-10 px-8 py-20 text-center">
-            <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-6">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Need Expert Help?
             </h2>
-            <p className="text-indigo-100 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-10">
-              Let's talk about how Narayani Infotech can simplify and supercharge your business with reliable, customized technology services.
+            <p className="text-indigo-100 text-lg md:text-xl max-w-2xl mx-auto mb-10">
+              Let's talk about how Gaurang Infotech can simplify and supercharge your business with reliable, customized technology services.
             </p>
-            
-            <motion.div
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.96 }}
-            >
-              <Button className="h-14 px-10 rounded-full bg-white text-indigo-600 hover:bg-indigo-50 font-bold text-base shadow-[0_18px_45px_rgba(15,23,42,0.35)] hover:-translate-y-1 transition-all duration-300 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-indigo-600">
-                Get a Free Quote
-              </Button>
-            </motion.div>
+            <Button className="h-14 px-10 rounded-full bg-white text-indigo-600 hover:bg-indigo-50 font-bold text-lg shadow-xl shadow-indigo-900/20 hover:-translate-y-1 transition-all">
+              Get a Free Quote
+            </Button>
           </div>
-        </motion.div>
+        </div>
       </section>
 
     </div>

@@ -7,11 +7,12 @@ import { Star, Quote } from "lucide-react";
 const testimonials = [
   { name: "Ramesh S.", role: "CTO, Manufacturing", text: "Excellent service! Gaurang Infotech helped us scale our cloud infrastructure seamlessly and saved costs." },
   { name: "Priya K.", role: "Director, Retail Chain", text: "Highly professional and timely delivery. The team understood our needs and executed flawlessly." },
-  { name: "Vishal T.", role: "Operations Head, Mining", text: "Our mining operations have become more efficient and safer thanks to their automation solutions." },
   { name: "Anjali M.", role: "Founder, FinTech", text: "They provided top-notch security services and proactive monitoring. We finally feel protected online." },
-  { name: "Rohit J.", role: "Logistics Manager", text: "Their fuel tracking solution helped us save thousands monthly. A great investment for logistics." },
   { name: "Sneha L.", role: "HR Director", text: "The custom ERP they built was user-friendly and integrated smoothly with our operations." },
   { name: "Manish G.", role: "IT Head", text: "Great uptime and support on their data center. We trust them completely with our critical systems." },
+  { name: "Vikram P.", role: "CEO, SMB Enterprise", text: "Their hardware supply and networking setup transformed our office infrastructure. Fast delivery and excellent support." },
+  { name: "Neha R.", role: "Operations Manager", text: "The managed services package is a game-changer. 24/7 monitoring means we can focus on business, not IT issues." },
+  { name: "Aditya M.", role: "Finance Director", text: "The IT audit they conducted revealed critical vulnerabilities. Their recommendations improved our security posture significantly." },
 ];
 
 const TestimonialCard = ({ name, role, text }) => (

@@ -3,7 +3,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Cloud, Database, Lock, Pickaxe, Monitor, Truck } from "lucide-react";
+import { Cloud, Database, Lock, HardDrive, Network, Settings, FileCheck } from "lucide-react";
 
 const services = [
   {
@@ -21,31 +21,38 @@ const services = [
     bg: "bg-indigo-50/50"
   },
   {
-    title: "Mining Solutions",
-    desc: "Smart automation for safer and more efficient mining operations.",
-    icon: Pickaxe,
+    title: "Hardware Supply",
+    desc: "Premium IT hardware, storage devices, and networking equipment from trusted brands.",
+    icon: HardDrive,
     colSpan: "md:col-span-1",
     bg: "bg-slate-50/50"
   },
   {
     title: "Software Solutions",
     desc: "Custom ERP/CRM development tailored to your specific workflow.",
-    icon: Monitor,
+    icon: Database,
     colSpan: "md:col-span-2",
     bg: "bg-purple-50/50"
   },
   {
-    title: "Data Center",
-    desc: "Secure, always-on storage and recovery at scale.",
-    icon: Database,
+    title: "Managed Services",
+    desc: "24/7 monitoring, maintenance, and proactive IT management for your infrastructure.",
+    icon: Settings,
     colSpan: "md:col-span-1",
     bg: "bg-emerald-50/50"
   },
-   {
-    title: "Fuel Tracking",
-    desc: "Monitor fleet consumption in real-time to reduce loss.",
-    icon: Truck,
-    colSpan: "md:col-span-2",
+  {
+    title: "Storage & Networking",
+    desc: "Enterprise-grade storage solutions and robust networking infrastructure.",
+    icon: Network,
+    colSpan: "md:col-span-1",
+    bg: "bg-cyan-50/50"
+  },
+  {
+    title: "IT Auditing",
+    desc: "Comprehensive IT audits to assess security, compliance, and operational efficiency.",
+    icon: FileCheck,
+    colSpan: "md:col-span-1",
     bg: "bg-orange-50/50"
   },
 ];
@@ -56,7 +63,7 @@ const BentoCard = ({ title, desc, icon: Icon, colSpan, bg, index }) => (
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
     transition={{ delay: index * 0.1, duration: 0.5 }}
-    className={`${colSpan} group relative overflow-hidden rounded-3xl border border-white/20 bg-white/60 dark:bg-slate-900/60 backdrop-blur-xl p-8 hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-500 hover:-translate-y-1`}
+    className={`${colSpan} group relative overflow-hidden rounded-3xl border border-white/20 bg-white/60 backdrop-blur-xl p-8 hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-500 hover:-translate-y-1`}
   >
     <div className={`absolute top-0 right-0 w-32 h-32 ${bg} blur-3xl rounded-full -mr-16 -mt-16 transition-all group-hover:scale-150`} />
     
@@ -66,8 +73,8 @@ const BentoCard = ({ title, desc, icon: Icon, colSpan, bg, index }) => (
       </div>
       
       <div>
-        <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 tracking-tight">{title}</h3>
-        <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-sm">{desc}</p>
+        <h3 className="text-xl font-bold text-slate-900 mb-2 tracking-tight">{title}</h3>
+        <p className="text-slate-600 leading-relaxed text-sm">{desc}</p>
       </div>
     </div>
   </motion.div>
@@ -75,15 +82,15 @@ const BentoCard = ({ title, desc, icon: Icon, colSpan, bg, index }) => (
 
 export default function Services() {
   return (
-    <section className="py-24 bg-slate-50/50 dark:bg-slate-950/50" id="services">
+    <section className="py-24 bg-slate-50/50" id="services">
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-16 text-center max-w-2xl mx-auto">
            <span className="text-indigo-600 font-semibold tracking-wider text-sm uppercase">Our Expertise</span>
-           <h2 className="text-4xl font-bold text-slate-900 dark:text-white mt-2 mb-4 tracking-tight">
-             Holistic IT Solutions
+           <h2 className="text-4xl font-bold text-slate-900 mt-2 mb-4 tracking-tight">
+             Tailored IT Solutions
            </h2>
-           <p className="text-slate-600 dark:text-slate-400">
-             From infrastructure to automation, we provide the technology backbone your business needs to grow.
+           <p className="text-slate-600">
+             From infrastructure to software, we provide customized technology solutions designed specifically for Small and Medium Businesses.
            </p>
         </div>
 

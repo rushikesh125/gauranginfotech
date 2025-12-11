@@ -71,9 +71,21 @@ export default function Footer() {
               ))}
             </ul>
           </div>
-
+<div>
+  <h4 className="font-bold text-slate-900 mb-6">Solutions</h4>
+  <ul className="space-y-3">
+    {['Cloud Computing', 'Data Center', 'IT Security', 'Hardware Supply', 'Managed Services'].map((item) => (
+      <li key={item}>
+         <Link href="/services" className="text-slate-500 hover:text-indigo-600 transition-colors text-sm font-medium flex items-center gap-2 group">
+          <span className="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-indigo-600 transition-colors" />
+          {item}
+         </Link>
+      </li>
+    ))}
+  </ul>
+</div>
           {/* 3. Solutions / Services */}
-          <div>
+          {/* <div>
             <h4 className="font-bold text-slate-900 mb-6">Solutions</h4>
             <ul className="space-y-3">
               {servicesLinks.map((item) => (
@@ -85,7 +97,7 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
 
           {/* 4. Contact Info */}
           <div>
