@@ -45,9 +45,7 @@ export default function ContactPage() {
 
   const handleChange = (field) => (e) => {
     const value =
-      field === "message"
-        ? e.target.value.slice(0, 500)
-        : e.target.value;
+      field === "message" ? e.target.value.slice(0, 500) : e.target.value;
 
     setForm((prev) => ({ ...prev, [field]: value }));
     if (errors[field]) {
@@ -71,13 +69,11 @@ export default function ContactPage() {
       formData.append("phone", form.phone);
       formData.append("message", form.message);
 
-      const res = await fetch(
-        process.env.NEXT_PUBLIC_CONTACT_FORM_ENDPOINT,
-        {
-          method: "POST",
-          body: formData,
-        }
-      );
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
 
       let data;
       try {
@@ -126,8 +122,8 @@ export default function ContactPage() {
             </span>
           </h1>
           <p className="text-slate-600 text-lg">
-            Tailored solutions for Small and Medium Businesses—from IT hardware, storage and
-            networking to managed services and IT audits.
+            Tailored solutions for Small and Medium Businesses—from IT hardware,
+            storage and networking to managed services and IT audits.
           </p>
         </div>
 
@@ -144,7 +140,8 @@ export default function ContactPage() {
               Send us a message
             </h2>
             <p className="text-slate-500 text-sm mb-8">
-              Share a bit about your requirements. Our team will get back within 24 hours.
+              Share a bit about your requirements. Our team will get back within
+              24 hours.
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -247,7 +244,8 @@ export default function ContactPage() {
               </Button>
 
               <p className="text-[11px] text-slate-400 text-center">
-                By submitting this form, you agree to be contacted regarding your enquiry.
+                By submitting this form, you agree to be contacted regarding
+                your enquiry.
               </p>
             </form>
           </motion.div>
@@ -281,7 +279,8 @@ export default function ContactPage() {
                 <div>
                   <p className="font-semibold text-slate-900">Office</p>
                   <p className="text-slate-500">
-                    Swami Vivekanand Nagar No.4, Wakad, Pimpri-Chinchwad, MH 411057
+                    Swami Vivekanand Nagar No.4, Wakad, Pimpri-Chinchwad, MH
+                    411057
                   </p>
                 </div>
               </div>
@@ -305,7 +304,10 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <p className="font-semibold text-slate-900">Phone</p>
-                  <a href="tel:+919623447764" className="text-slate-500 hover:text-indigo-600">
+                  <a
+                    href="tel:+919623447764"
+                    className="text-slate-500 hover:text-indigo-600"
+                  >
                     +91-9623447764
                   </a>
                 </div>
