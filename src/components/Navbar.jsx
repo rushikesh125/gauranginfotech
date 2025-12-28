@@ -6,10 +6,12 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -40,8 +42,8 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white font-bold text-lg group-hover:scale-105 transition-transform duration-300">
-              G
+            <div className="w-10 h-10 rounded-md  overflow-hidden bg-indigo-600 flex items-center justify-center text-white font-bold text-lg group-hover:scale-105 transition-transform duration-300">
+              <img src="./logo.png"/>
             </div>
             <span className="font-bold text-xl tracking-tight text-slate-900 dark:text-white">
               Gaurang<span className="text-indigo-600">Infotech</span>
@@ -59,7 +61,7 @@ export default function Navbar() {
                 {link.name}
               </Link>
             ))}
-            <Button className="bg-slate-900 text-white hover:bg-slate-800 hover:shadow-lg hover:shadow-indigo-500/20 transition-all duration-300 rounded-full px-6">
+            <Button onClick={()=>router.push("/contactus")} className="cursor-pointer bg-slate-900 text-white hover:bg-slate-800 hover:shadow-lg hover:shadow-indigo-500/20 transition-all duration-300 rounded-full px-6">
               Get a Quote
             </Button>
           </div>
@@ -121,7 +123,7 @@ export default function Navbar() {
                   </motion.div>
                 ))}
                 <div className="mt-4 pt-6 border-t border-slate-100 dark:border-slate-800">
-                  <Button className="w-full bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl py-6 text-lg">
+                  <Button onClick={()=>router.push("/contactus")} className="cursor-pointer w-full bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl py-6 text-lg">
                     Get a Free Quote
                   </Button>
                 </div>

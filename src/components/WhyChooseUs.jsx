@@ -33,7 +33,7 @@ export default function WhyChooseUs() {
           </h2>
           <p className="text-lg text-slate-600 leading-relaxed">
             Founded by Kavita Singh, Gaurang Infotech brings over 15 years of proven experience. 
-            We don't just build software; we build sustainable business growth through technology.
+            We don't just build software application; we build sustainable business growth through technology.
           </p>
           
           <div className="pt-4 grid sm:grid-cols-2 gap-4">
@@ -44,7 +44,7 @@ export default function WhyChooseUs() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="flex items-start gap-3"
+                className="flex items-start gap-3 "
               >
                 <CheckCircle2 className="w-5 h-5 text-indigo-500 shrink-0 mt-0.5" />
                 <span className="text-slate-700 text-sm font-medium">{reason}</span>

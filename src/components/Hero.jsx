@@ -6,6 +6,7 @@ import Image from "next/image"; // Optimized Image loading
 import { motion } from "framer-motion";
 import { ArrowRight, ShieldCheck, Zap, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
 
 const badgeVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -40,6 +41,7 @@ const imageVariants = {
 };
 
 export default function Hero() {
+  const router = useRouter()
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-20">
       {/* Dynamic Background Blobs */}
@@ -87,7 +89,7 @@ export default function Hero() {
           >
             Gaurang Infotech delivers smart, scalable, and secure IT solutions
             tailored for Small and Medium Businesses. From Hardware Supply to
-            Managed Services, we are the experts trusted by enterprises.
+            Managed Services, we are the experts trusted by enterprises of different industries
           </motion.p>
 
           {/* Buttons */}
@@ -95,14 +97,14 @@ export default function Hero() {
             variants={textVariants}
             className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
           >
-            <Button className="h-12 px-8 rounded-full bg-slate-900 text-white hover:bg-slate-800 shadow-xl shadow-indigo-500/20 hover:scale-[1.02] active:scale-95 transition-all duration-300 text-base">
+            <Button onClick={()=>router.push('/services')} className="cursor-pointer h-12 px-8 rounded-full bg-slate-900 text-white hover:bg-slate-800 shadow-xl shadow-indigo-500/20 hover:scale-[1.02] active:scale-95 transition-all duration-300 text-base">
               Explore Services
             </Button>
-            <Button
+            <Button onClick={()=>router.push("/contactus")}
               variant="outline"
-              className="h-12 px-8 rounded-full border-slate-200 hover:bg-slate-50 text-slate-700 hover:border-slate-300 transition-all duration-300 text-base group"
+              className="h-12 px-8 rounded-full cursor-pointer border-slate-200 hover:bg-slate-50 text-slate-700 hover:border-slate-300 transition-all duration-300 text-base group"
             >
-              Contact Us{" "}
+              Contact Us
               <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Button>
           </motion.div>

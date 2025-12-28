@@ -22,7 +22,7 @@ export default function Footer() {
     { name: "About", href: "/about" },
     { name: "Services", href: "/services" },
     { name: "Projects", href: "/projects" },
-    { name: "Contact", href: "/contact" },
+    { name: "Contact", href: "/contactus" },
   ];
 
   const servicesLinks = [
@@ -43,9 +43,9 @@ export default function Footer() {
           {/* 1. Brand Column */}
           <div className="space-y-6">
             <Link href="/" className="flex items-center gap-2 group">
-              <div className="w-10 h-10 rounded-xl bg-indigo-600 flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-indigo-500/30 group-hover:scale-105 transition-transform">
-                G
-              </div>
+               <div className="w-10 h-10 rounded-md  overflow-hidden bg-indigo-600 flex items-center justify-center text-white font-bold text-lg group-hover:scale-105 transition-transform duration-300">
+              <img src="./logo.png"/>
+            </div>
               <span className="font-bold text-2xl tracking-tight text-slate-900">
                 Gaurang<span className="text-indigo-600">Infotech</span>
               </span>

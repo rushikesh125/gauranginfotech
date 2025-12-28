@@ -134,10 +134,10 @@ const FeaturedProject = ({ project }) => (
         </div>
 
         {/* Button/Call to Action - Micro-Interaction on hover */}
-        <button className="self-start flex items-center gap-2 text-indigo-600 font-bold group/btn transition-colors hover:text-indigo-800">
+        {/* <button className="self-start flex items-center gap-2 text-indigo-600 font-bold group/btn transition-colors hover:text-indigo-800">
           <span className="text-lg">View Case Study</span>
           <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform duration-300" />
-        </button>
+        </button> */}
       </div>
     </div>
   </motion.div>

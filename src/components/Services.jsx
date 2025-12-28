@@ -29,7 +29,7 @@ const services = [
   },
   {
     title: "Software Solutions",
-    desc: "Custom ERP/CRM development tailored to your specific workflow.",
+    desc: "We design and develop custom ERP/CRM solutions, websites, web portals, mobile apps, and ML/AI technologies—built specifically around your workflow.",
     icon: Database,
     colSpan: "md:col-span-2",
     bg: "bg-purple-50/50"
@@ -63,11 +63,11 @@ const BentoCard = ({ title, desc, icon: Icon, colSpan, bg, index }) => (
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
     transition={{ delay: index * 0.1, duration: 0.5 }}
-    className={`${colSpan} group relative overflow-hidden rounded-3xl border border-white/20 bg-white/60 backdrop-blur-xl p-8 hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-500 hover:-translate-y-1`}
+    className={`${colSpan} group relative overflow-hidden rounded-3xl border border-white/20 bg-white/60 backdrop-blur-xl p-8 hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-500 hover:-translate-y-1  shadow-md`}
   >
     <div className={`absolute top-0 right-0 w-32 h-32 ${bg} blur-3xl rounded-full -mr-16 -mt-16 transition-all group-hover:scale-150`} />
     
-    <div className="relative z-10 flex flex-col h-full justify-between">
+    <div className="relative z-10 flex flex-col h-full justify-between ">
       <div className="mb-6 w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
         <Icon className="w-6 h-6 text-slate-900" />
       </div>
