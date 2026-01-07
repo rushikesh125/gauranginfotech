@@ -175,14 +175,6 @@ export default function AboutPage() {
               className="grid grid-cols-3 gap-4 pt-4 border-t border-slate-200 dark:border-slate-800"
             >
               <div>
-                <h3 className="text-3xl font-bold text-indigo-600">15+</h3>
-                <p className="text-sm text-slate-500">Years Exp.</p>
-              </div>
-              <div>
-                <h3 className="text-3xl font-bold text-indigo-600">200+</h3>
-                <p className="text-sm text-slate-500">Projects</p>
-              </div>
-              <div>
                 <h3 className="text-3xl font-bold text-indigo-600">100%</h3>
                 <p className="text-sm text-slate-500">Commitment</p>
               </div>
@@ -206,11 +198,6 @@ export default function AboutPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              {
-                title: "15+ Years Expertise",
-                icon: Award,
-                desc: "Deep industry knowledge backed by a proven track record.",
-              },
               {
                 title: "Customer-Centric",
                 icon: HeartHandshake,

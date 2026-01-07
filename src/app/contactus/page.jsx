@@ -144,6 +144,9 @@ export default function ContactPage() {
               Share a bit about your requirements. Our team will get back within
               24 hours.
             </p>
+           <div className="my-2">
+             <WhatsAppButton/>  OR 
+           </div>
 
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Name */}

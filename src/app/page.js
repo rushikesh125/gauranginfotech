@@ -12,7 +12,7 @@ export default function Home() {
       <Hero />
       
       {/* 2. Stats Row (Social Proof) - Integrating your stats data */}
-      <Stats />
+      {/* <Stats /> */}
 
       {/* 3. Bento Grid Services */}
       <Services />
