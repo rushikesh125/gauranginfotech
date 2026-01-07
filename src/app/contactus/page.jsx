@@ -297,10 +297,10 @@ export default function ContactPage() {
                 <div>
                   <p className="font-semibold text-slate-900">Email</p>
                   <a
-                    href="mailto:info@gauranginfotech.com"
+                    href="mailto:kavitasgaurang2026@outlook.com"
                     className="text-slate-500 hover:text-indigo-600"
                   >
-                    info@gauranginfotech.com
+                    kavitasgaurang2026@outlook.com
                   </a>
                 </div>
               </div>

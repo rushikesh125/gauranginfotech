@@ -36,7 +36,7 @@ export default function Footer() {
   return (
     <footer className="relative bg-slate-50 border-t border-slate-200 pt-20 pb-10 overflow-hidden">
       {/* Subtle Background Pattern */}
-      <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(#4f46e5_1px,transparent_1px),linear-gradient(90deg,#4f46e5_1px,transparent_1px)] bg-size-[32px_32px] pointer-events-none" />
+      <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(#4f46e5_1px,transparent_1px),linear-gradient(90deg,#4f46e5_1px,transparent_1px)] bg-size-[32px_32px]kavitasgaurang2026@outlook.comkavitasgaurang2026@outlook.com pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
@@ -126,10 +126,10 @@ export default function Footer() {
                   <Mail className="w-4 h-4 text-indigo-600" />
                 </div>
                 <a
-                  href="mailto:info@gauranginfotech.com"
+                  href="mailto:kavitasgaurang2026@outlook.com"
                   className="hover:text-indigo-600 font-medium"
                 >
-                  info@gauranginfotech.com
+                  kavitasgaurang2026@outlook.com
                 </a>
               </li>
               <li className="flex items-center gap-3">
