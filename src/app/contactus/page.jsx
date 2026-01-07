@@ -3,8 +3,9 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { MapPin, Mail, Phone, ArrowRight, Info, X } from "lucide-react";
+import { MapPin, Mail, Phone, ArrowRight, Info, X, Contact2Icon } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import WhatsAppButton from "@/components/WhatsappBth";
 
 export default function ContactPage() {
   const [form, setForm] = useState({
@@ -242,6 +243,8 @@ export default function ContactPage() {
                 {submitting ? "Sending..." : "Submit Enquiry"}
                 {!submitting && <ArrowRight className="w-4 h-4" />}
               </Button>
+              <hr className="my-2"/>
+             
 
               <p className="text-[11px] text-slate-400 text-center">
                 By submitting this form, you agree to be contacted regarding
@@ -312,7 +315,16 @@ export default function ContactPage() {
                   </a>
                 </div>
               </div>
+              <div className="flex items-start gap-3 bg-white rounded-2xl p-4 border border-slate-200 shadow-sm">
+                <div className="w-9 h-9 rounded-full bg-indigo-50 flex items-center justify-center shrink-0">
+                  <Contact2Icon className="w-4 h-4 text-green-600" />
+                </div>
+                <div>
+                  <WhatsAppButton/>
+                </div>
+              </div>
             </div>
+             
           </motion.div>
         </div>
       </section>
